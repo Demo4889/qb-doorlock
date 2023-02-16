@@ -124,7 +124,7 @@ local function HandleDoorDebug()
 	CreateThread(function()
 		while Config.DoorDebug do
 			if closestDoor.data then
-				Draw3DText(closestDoor.data.textCoords, closestDoor.data.doorLabel or 'Door Here')
+				Draw3DText(closestDoor.data.objCoords, "Door ID: "..closestDoor.id)
 			end
 			Wait(0)
 		end
